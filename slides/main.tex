@@ -3,8 +3,8 @@
 
 \mode<presentation>
 {
-	\usetheme{Montpellier}      % or try Darmstadt, Madrid, Warsaw, ...
-	\usecolortheme{rose} % or try albatross, beaver, crane, dove...
+	\usetheme{Montpellier}	% or try Darmstadt, Madrid, Warsaw, ...
+	\usecolortheme{rose}	% or try albatross, beaver, crane, dove...
 	\usefonttheme{default}  % or try serif, structurebold, ...
 	\setbeamertemplate{navigation symbols}{}
 	\setbeamertemplate{caption}[numbered]
@@ -101,9 +101,16 @@
 		\begin{frame}{The problem}
 
 			\begin{itemize}
-				\item \textbf{The traditional approach}: 3D CNNs 
-				\item \textbf{What's missing}: algorithms do not see video as a continuous stream of images, but as discrete frames.
+				\item \textbf{The traditional approach}: 3D CNNs (CNN models with the additional temporal dimension)
+				\item \textbf{What's missing}: hard to control when the video is very long or it is of indefinite length (like live streaming).
 			\end{itemize}
+
+			\vskip 0.5cm
+
+			\begin{block}{Example}
+				It would be hard to pick up sudden moves in long videos because the longer the video, the worse the temporal resolution.
+				(like a very tiny object in a very massive picture in 2D CNNs)
+			\end{block}
 
 		\end{frame}
 
@@ -112,10 +119,17 @@
 
 		\begin{frame}{Our motivation}
 
-			Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 < \infty$, and let
-			$$S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
-				= \frac{1}{n}\sum_{i}^{n} X_i$$
-			denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $\mathcal{N}(0, \sigma^2)$.
+			Why not neural networks?
+
+			\begin{itemize}
+				\item \textbf{Neural networks are relatively slow}: the inference time of a lot of NNs makes them difficult to be used in real-time video analysis.
+				\item And the 2SDS algorithm is fully capable of handling simple scene separation tasks.
+			\end{itemize}
+
+			% Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 < \infty$, and let
+			% $$S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
+			% 	= \frac{1}{n}\sum_{i}^{n} X_i$$
+			% denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $\mathcal{N}(0, \sigma^2)$.
 
 		\end{frame}
 
