@@ -3,11 +3,11 @@
 
 \mode<presentation>
 {
-  \usetheme{Montpellier}      % or try Darmstadt, Madrid, Warsaw, ...
-  \usecolortheme{rose} % or try albatross, beaver, crane, dove...
-  \usefonttheme{default}  % or try serif, structurebold, ...
-  \setbeamertemplate{navigation symbols}{}
-  \setbeamertemplate{caption}[numbered]
+	\usetheme{Montpellier}      % or try Darmstadt, Madrid, Warsaw, ...
+	\usecolortheme{rose} % or try albatross, beaver, crane, dove...
+	\usefonttheme{default}  % or try serif, structurebold, ...
+	\setbeamertemplate{navigation symbols}{}
+	\setbeamertemplate{caption}[numbered]
 } 
 
 \usepackage[english]{babel}
@@ -20,11 +20,11 @@
 	bookmarksopen=false,
 	pdfpagemode=UseNone,
 	%pdfpagemode=FullScreen,   %% Enable to have Adobe Reader query for fullscreen mode
-	pdfauthor={Detlev Conrad Mielczarek} %% Enter the apppropriate author in here
+	pdfauthor={Yuelin Xin} %% Enter the apppropriate author in here
 }
 
 \newcommand\AtPagemyUpperLeft[1]{\AtPageLowerLeft{%
-		\put(\LenToUnit{0.75\paperwidth},\LenToUnit{0.89\paperheight}){#1}}}
+		\put(\LenToUnit{0.75\paperwidth},\LenToUnit{0.9075\paperheight}){#1}}}
 \AddToShipoutPictureFG{
 	\AtPagemyUpperLeft{{\includegraphics[width=3cm,keepaspectratio]{mf.png}}}
 }%
@@ -75,20 +75,15 @@
 
 			\begin{itemize}
 				\item \textbf{Background}: real-time video stream interpretation, including video semantics / video accessibility / surveillance footage auto-interpretation, etc.
-				\item \textbf{What's missing}: algorithms do not see video as a continuous stream of images, but as discrete frames.
+				\item \textbf{Difficulties}: algorithms do not see video as a continuous stream of images, but as discrete frames.
 			\end{itemize}
 
+			\vskip 0.3cm
 
 			\begin{figure}
 				\includegraphics[width=5cm]{image-semantics.jpeg}
 				\caption{\label{fig:your-figure}Video semantics.}
 			\end{figure}
-
-			% \begin{itemize}
-			% \item Use \texttt{tabular} for basic tables --- see Table~\ref{tab:widgets}, for example.
-			% \item You can upload a figure (JPEG, PNG or PDF) using the files menu. 
-			% \item To include it in your document, use the \texttt{includegraphics} command (see the comment below in the source code).
-			% \end{itemize}
 
 			% \begin{table}
 			% \centering
@@ -105,7 +100,10 @@
 
 		\begin{frame}{The problem}
 
-
+			\begin{itemize}
+				\item \textbf{The traditional approach}: 3D CNNs 
+				\item \textbf{What's missing}: algorithms do not see video as a continuous stream of images, but as discrete frames.
+			\end{itemize}
 
 		\end{frame}
 
@@ -122,6 +120,12 @@
 		\end{frame}
 
 
-	\section{}
+	\section{Method: 2SDS}
+
+	\section{Our results}
+
+	\section{Future improvements}
+
+	\section{Conclusion}
 
 \end{document}
