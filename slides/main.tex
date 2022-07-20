@@ -40,78 +40,88 @@
 
 \begin{document}
 
-\begin{frame}
-  \titlepage
-\end{frame}
+	\begin{frame}
+		\titlepage
+	\end{frame}
 
-% Uncomment these lines for an automatically generated outline.
-%\begin{frame}{Outline}
-%  \tableofcontents
-%\end{frame}
+	% Uncomment these lines for an automatically generated outline.
+	\begin{frame}{Outline}
+		\tableofcontents
+	\end{frame}
 
-\section{Introduction}
+	\section{Introduction}
 
-\begin{frame}{Introduction}
+		\begin{frame}{Introduction}
 
-\begin{itemize}
-  \item The problem (Background \& What we want to achieve)
-  \item Our motivation (Why not neural networks?)
-\end{itemize}
+			\begin{itemize}
+				\item The problem (Background \& What we want to achieve)
+				\item Our motivation (Why not neural networks?)
+			\end{itemize}
 
-\vskip 1cm
+			\vskip 1cm
 
-\begin{block}{Remark}
-\textbf{Scene separation} is a problem in which we want to separate a video stream into different scenes.
-\textbf{A scene} is defined as a group of similar-looking frames that are temporally adjacent to each other.
-\end{block}
+			\begin{block}{Remark}
+				\textbf{Scene separation} is a problem in which we want to separate a video stream into different scenes.
+				\textbf{A scene} is defined as a group of similar-looking frames that are temporally adjacent to each other.
+			\end{block}
 
-\end{frame}
-
-\section{Introduction}
-
-\subsection{The problem}
-
-\begin{frame}{The problem}
+		\end{frame}
 
 
-\begin{itemize}
-  \item \textbf{Background}: real-time video stream interpretation, including video semantics / video accessibility / surveillance footage auto-interpretation, etc.
-  \item \textbf{What's missing}: algorithms do not see video as a continuous stream of images, but as discrete frames.
-\end{itemize}
+	\subsection{The problem}
+
+		\begin{frame}{The problem}
 
 
-\begin{figure}
-\includegraphics[width=5cm]{image-semantics.jpeg}
-\caption{\label{fig:your-figure}Video semantics.}
-\end{figure}
+			\begin{itemize}
+				\item \textbf{Background}: real-time video stream interpretation, including video semantics / video accessibility / surveillance footage auto-interpretation, etc.
+				\item \textbf{What's missing}: algorithms do not see video as a continuous stream of images, but as discrete frames.
+			\end{itemize}
 
-% \begin{itemize}
-% \item Use \texttt{tabular} for basic tables --- see Table~\ref{tab:widgets}, for example.
-% \item You can upload a figure (JPEG, PNG or PDF) using the files menu. 
-% \item To include it in your document, use the \texttt{includegraphics} command (see the comment below in the source code).
-% \end{itemize}
 
-% \begin{table}
-% \centering
-% \begin{tabular}{l|r}
-% Item & Quantity \\\hline
-% Widgets & 42 \\
-% Gadgets & 13
-% \end{tabular}
-% \caption{\label{tab:widgets}An example table.}
-% \end{table}
+			\begin{figure}
+				\includegraphics[width=5cm]{image-semantics.jpeg}
+				\caption{\label{fig:your-figure}Video semantics.}
+			\end{figure}
 
-\end{frame}
+			% \begin{itemize}
+			% \item Use \texttt{tabular} for basic tables --- see Table~\ref{tab:widgets}, for example.
+			% \item You can upload a figure (JPEG, PNG or PDF) using the files menu. 
+			% \item To include it in your document, use the \texttt{includegraphics} command (see the comment below in the source code).
+			% \end{itemize}
 
-\subsection{Our motivation}
+			% \begin{table}
+			% \centering
+			% \begin{tabular}{l|r}
+			% Item & Quantity \\\hline
+			% Widgets & 42 \\
+			% Gadgets & 13
+			% \end{tabular}
+			% \caption{\label{tab:widgets}An example table.}
+			% \end{table}
 
-\begin{frame}{Readable Mathematics}
+		\end{frame}
 
-Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 < \infty$, and let
-$$S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
-      = \frac{1}{n}\sum_{i}^{n} X_i$$
-denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $\mathcal{N}(0, \sigma^2)$.
 
-\end{frame}
+		\begin{frame}{The problem}
+
+
+
+		\end{frame}
+
+
+	\subsection{Our motivation}
+
+		\begin{frame}{Our motivation}
+
+			Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 < \infty$, and let
+			$$S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
+				= \frac{1}{n}\sum_{i}^{n} X_i$$
+			denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $\mathcal{N}(0, \sigma^2)$.
+
+		\end{frame}
+
+
+	\section{}
 
 \end{document}
