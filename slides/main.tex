@@ -227,8 +227,11 @@
 			\begin{frame}{Scene separation}
 
 				\begin{itemize}
-					\item \textbf{Calculate Hamming distance}: Calculate the Hamming distance between two hash values.
+					\item \textbf{Calculate Hamming distance}: Calculate the Hamming distance between two adjacent frames.\\
+					Hamming distance is what determines the similarity between two frames, the higher the distance, the less similar the two frames are.
 				\end{itemize}
+
+				\vskip 0.5cm
 
 				\begin{block}{Example}
 					The Hamming distance between the hash values $h_1=c4e0d8988c989898$ and $h_2=eee6989c8c989898$ is:	
@@ -240,9 +243,18 @@
 		\subsection{Data selection}
 
 			\begin{frame}{Data selection}
+				
+				\begin{itemize}
+					\item \textbf{Data smoothing}: Filter all the data noise by using a weighted average pooling filter.\\
+					\item \textbf{Data selection}: Merge the selected frames into a single frame.
+				\end{itemize}
+
 			\end{frame}
 
 	\section{Our results}
+
+		\begin{frame}{Our results}
+		\end{frame}
 
 		\begin{frame}{Our results}
 		\end{frame}
