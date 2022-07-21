@@ -85,16 +85,6 @@
 				\caption{\label{fig:Video-Semantics}Video semantics.}
 			\end{figure}
 
-			% \begin{table}
-			% \centering
-			% \begin{tabular}{l|r}
-			% Item & Quantity \\\hline
-			% Widgets & 42 \\
-			% Gadgets & 13
-			% \end{tabular}
-			% \caption{\label{tab:widgets}An example table.}
-			% \end{table}
-
 		\end{frame}
 
 
@@ -130,12 +120,12 @@
 
 			\begin{table}
 				\centering
-				\begin{tabular}{l|r}
-				Algorithm & FPS (higher is better) \\\hline
-				YOLOv5s & 13 \\
-				2SDS & 100
+				\begin{tabular}{l|r|r}
+				Algorithm & FPS(higher better) & Inference time\\\hline
+				YOLOv5s & 11 & 92.2ms \\
+				2SDS & 227 & 4.4ms
 				\end{tabular}
-			\caption{\label{tab:widgets}Comparison of inference speed under same hardware.\footnote{Apple M1 Pro (CPU)}}
+			\caption{\label{tab:widgets}Comparison of inference speed under same hardware.\footnote{Apple M1 (CPU)}}
 			\end{table}
 
 			% Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 < \infty$, and let
@@ -205,6 +195,46 @@
 		\subsection{Scene separation}
 
 			\begin{frame}{Scene separation}
+
+				\begin{itemize}
+					\item \textbf{Down sample}: Downsample the frames to 8 by 9 
+					(simplify calculation / make the algorithm less sensitive to small changes in the video).
+					\item \textbf{Gray scale}: Convert RGB into grayscale to reduce calculation complexity.
+				\end{itemize}
+
+				\begin{figure}
+					\includegraphics[width=5.5cm]{images/down-sample-grayscale.png}
+					\caption{\label{fig:Scene-Separation}Temporal segmentation.}
+				\end{figure}
+
+			\end{frame}
+
+			\begin{frame}{Scene separation}
+
+				\begin{itemize}
+					\item \textbf{Calculate Hash value}: Convert the grayscale graph into a 16-bit hash value, using the following rules:\\
+					(a): One binary value stands for the grayscale difference between two adjacent pixels.\\
+					(b): If the gray scale value of the pixel on the left is greater than the pixel on the right, the value is 1, otherwise it is 0.
+				\end{itemize}
+
+				\begin{figure}
+					\includegraphics[width=2.5cm]{images/binary-sequence.png}
+					\caption{\label{fig:Binary-Sequence}Binary sequence convertion.}
+				\end{figure}
+				
+			\end{frame}
+
+			\begin{frame}{Scene separation}
+
+				\begin{itemize}
+					\item \textbf{Calculate Hamming distance}: Calculate the Hamming distance between two hash values.
+				\end{itemize}
+
+				\begin{block}{Example}
+					The Hamming distance between the hash values $h_1=c4e0d8988c989898$ and $h_2=eee6989c8c989898$ is:	
+					$ c4e0d8988c989898 \bigoplus eee6989c8c989898 = 7 $
+				\end{block}
+			
 			\end{frame}
 
 		\subsection{Data selection}
@@ -214,8 +244,17 @@
 
 	\section{Our results}
 
+		\begin{frame}{Our results}
+		\end{frame}
+
 	\section{Future improvements}
 
+		\begin{frame}{Future improvements}
+		\end{frame}
+
 	\section{Conclusion}
+
+		\begin{frame}{Conclusion}
+		\end{frame}
 
 \end{document}
