@@ -61,7 +61,7 @@
 			\vskip 1cm
 
 			\begin{block}{Remark}
-				\textbf{Scene separation} is a problem in which we want to separate a video stream into different scenes.
+				\textbf{Scene separation}(Temporal segmentation) is a problem in which we want to separate a video stream into different scenes.
 				\textbf{A scene} is defined as a group of similar-looking frames that are temporally adjacent to each other.
 			\end{block}
 
@@ -133,7 +133,7 @@
 				\begin{tabular}{l|r}
 				Algorithm & FPS (higher is better) \\\hline
 				YOLOv5s & 13 \\
-				2SDS & 
+				2SDS & 100
 				\end{tabular}
 			\caption{\label{tab:widgets}Comparison of inference speed under same hardware.\footnote{Apple M1 Pro (CPU)}}
 			\end{table}
@@ -148,34 +148,59 @@
 
 	\section{Method: 2SDS}
 
-		\begin{frame}{Related work}
-
-			SlowFast Networks [Feichtenhofer \textit{et al}., 2019]
-
-			\begin{figure}
-				\includegraphics[width=7cm]{images/slowfast-networks.png}
-				\caption{\label{fig:SlowFast-Networks}SlowFast Networks Architecture.}
-			\end{figure}
-
-		\end{frame}
-		
-		\begin{frame}{2SDS architecture}
-
-			\begin{figure}
-				\includegraphics[width=7cm]{images/2SDS.png}
-				\caption{\label{fig:2SDS}2SDS Architecture.}
-			\end{figure}
-
-		\end{frame}
-
-		\begin{frame}{2SDS: a two step method}
+		\begin{frame}{Method: 2SDS}
 
 			\begin{itemize}
-				\item Step 1: \textbf{Scene separation}
-				\item Step 2: \textbf{Data selection}
+				\item Related work: SlowFast Networks architecture
+				\item Our work: 2SDS architecture
+				\item Scene separation
+				\item Data selection
 			\end{itemize}
 
 		\end{frame}
+
+		\subsection{Related work}
+
+			\begin{frame}{Related work}
+
+				SlowFast Networks [Feichtenhofer \textit{et al}., 2019]
+
+				\begin{itemize}
+					\item \textbf{Slow pathway}:CNN with high spatial resolution(low FPS).
+					\item \textbf{Fast pathway}:CNN with high temporal resolution(high FPS).
+				\end{itemize}
+
+				\begin{figure}
+					\includegraphics[width=7cm]{images/slowfast-networks.png}
+					\caption{\label{fig:SlowFast-Networks}SlowFast Networks Architecture.}
+				\end{figure}
+
+			\end{frame}
+
+		\subsection{Our work}
+		
+			\begin{frame}{Our work}
+
+				Similar with the SlowFast Networks architecture, but we replace the fast pathway with 2SDS. \\
+				This architecture has an even \textbf{finer temporal resolution} because we replaced the CNN with a faster algorithm.
+
+				\vskip 0.2cm
+
+				\begin{figure}
+					\includegraphics[width=7cm]{images/2SDS.png}
+					\caption{\label{fig:2SDS}2SDS Architecture.}
+				\end{figure}
+
+			\end{frame}
+
+			\begin{frame}{2SDS: a two step method}
+
+				\begin{itemize}
+					\item Step 1: \textbf{Scene separation}(Temporal segmentation)
+					\item Step 2: \textbf{Data selection}
+				\end{itemize}
+
+			\end{frame}
 
 		\subsection{Scene separation}
 
