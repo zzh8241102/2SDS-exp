@@ -82,7 +82,7 @@
 
 			\begin{figure}
 				\includegraphics[width=5cm]{images/image-semantics.jpeg}
-				\caption{\label{fig:your-figure}Video semantics.}
+				\caption{\label{fig:Video-Semantics}Video semantics.}
 			\end{figure}
 
 			% \begin{table}
@@ -119,12 +119,25 @@
 
 		\begin{frame}{Our motivation}
 
-			Why not neural networks?
+			\textbf{Why not neural networks?}
 
 			\begin{itemize}
-				\item \textbf{Neural networks are relatively slow}: the inference time of a lot of NNs makes them difficult to be used in real-time video analysis.
+				\item Neural networks are relatively slow, the inference time of a lot of NNs makes them difficult to be used in real-time video analysis.
 				\item And the 2SDS algorithm is fully capable of handling simple scene separation tasks.
 			\end{itemize}
+
+			\vskip 0.3cm
+
+			\begin{table}
+				\centering
+				\begin{tabular}{l|r}
+				Algorithm & FPS (higher is better) \\\hline
+				YOLOv5s & 13 \\
+				2SDS & 
+				\end{tabular}
+			\caption{\label{tab:widgets}Comparison of inference speed under same hardware.\footnote{Apple M1 Pro (CPU)}}
+			\end{table}
+
 
 			% Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 < \infty$, and let
 			% $$S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
@@ -135,6 +148,31 @@
 
 
 	\section{Method: 2SDS}
+
+		\begin{frame}{Related work}
+
+			SlowFast Networks [Feichtenhofer \textit{et al}., 2019]
+
+			\begin{figure}
+				\includegraphics[width=7cm]{images/slowfast-networks.png}
+				\caption{\label{fig:SlowFast-Networks}SlowFast Networks Architecture.}
+			\end{figure}
+
+		\end{frame}
+		
+		\begin{frame}{2SDS: a two step method}
+
+		\end{frame}
+
+		\subsection{Scene separation}
+
+			\begin{frame}{Scene separation}
+			\end{frame}
+
+		\subsection{Data selection}
+
+			\begin{frame}{Data selection}
+			\end{frame}
 
 	\section{Our results}
 
