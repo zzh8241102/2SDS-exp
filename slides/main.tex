@@ -300,7 +300,15 @@
 
 		\begin{frame}{Future improvements}
 
+			Learn from \textbf{Graph Neural Networks} to improve the performance in vibrant videos.\\
+			Model the video frames as \textbf{graphs}, and use the graphs to weight in when calculating the similarity between two frames.
 
+			\vskip 0.2cm
+
+			\begin{figure}
+				\includegraphics[width=\textwidth]{images/graph-exp.png}
+				\caption{\label{fig:Graph-Example}Examples of graph implementation.}
+			\end{figure}
 
 		\end{frame}
 
@@ -309,7 +317,27 @@
 
 		\begin{frame}{Conclusion}
 
+			\begin{itemize}
+				\item Refined architecture compared with SlowFast Networks, with:\\
+				(a) Better temporal resolution; \\
+				(b) Less GFLOPs involved; \\
+				\item High FPS with decent accuracy on interview and hybrid videos.
+			\end{itemize}
 
+			\vskip 0.5cm
+
+			\begin{itemize}
+				\item Less accurate on vibrant videos.
+				\item Add graph modeling to improve vibrant video performance.
+				\item Need further testing to determine the exact performance.
+			\end{itemize}
+
+		\end{frame}
+
+		\begin{frame}
+
+			\center
+			\textbf{Thank you.}
 
 		\end{frame}
 
