@@ -260,6 +260,10 @@
 
 		\begin{frame}{Experiment}
 
+			We used YOLOv5 as the corresponding CNN in the 2SDS architecture.\\ 
+
+			\vskip 0.5cm
+
 			We have chosen 3 types of testing videos:
 
 			\begin{itemize}
@@ -278,19 +282,19 @@
 					\hline
 					Type No. & Output - Truth & Accuracy & 2SDS FPS  \\
 					\hline
-					Interview 1 & 25 - 25 & 100.00\% & \\
-					Interview 2 & 35 - 29 & 82.86\% & \\
-					Interview 3 & 31 - 28 & 90.32\% & \\
-					Interview Avg. & 91 - 82 & 90.10\% & \\
+					Interview 1 & 25 - 25 & 100.00\% & 196 \\
+					Interview 2 & 35 - 29 & 82.86\% & 211 \\
+					Interview 3 & 31 - 28 & 90.32\% & 135 \\
+					\textit{Interview Avg.} & 91 - 82 & 90.10\% & 181 \\
 					\hline
-					Vibrant 1 & 9 - 13 & 69.23\% & \\
-					Vibrant 2 & 19 - 38 & 50.00\% & \\
-					Vibrant Avg. & 28 - 51 & 54.90\% & \\
+					Vibrant 1 & 9 - 13 & 69.23\% & 238 \\
+					Vibrant 2 & 19 - 38 & 50.00\% & 166 \\
+					\textit{Vibrant Avg.} & 28 - 51 & 54.90\% & 202 \\
 					\hline
-					Hybrid 1 & 105 - 106 & 99.06\% & \\
+					Hybrid 1 & 105 - 106 & 99.06\% & 213 \\
 					\hline
 				\end{tabular}
-			\caption{\label{tab:Results}Preliminary experiment results.}
+			\caption{\label{tab:Results}Preliminary experiment results.\footnote{FPS data taken on Apple M1 (CPU)}}
 			\end{table}
 
 		\end{frame}
