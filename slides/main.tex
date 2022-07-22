@@ -121,17 +121,12 @@
 			\begin{table}
 				\centering
 				\begin{tabular}{l|r|r}
-				Algorithm & FPS(higher better) & Inference time\\\hline
+				Algorithm & FPS(higher better) & Avg. Inference time\\\hline
 				YOLOv5s & 11 & 92.2ms \\
 				2SDS & 227 & 4.4ms
 				\end{tabular}
-			\caption{\label{tab:widgets}Comparison of inference speed under same hardware.\footnote{Apple M1 (CPU)}}
+			\caption{\label{tab:Speed-Comparision}Comparison of inference speed under same hardware.\footnote{Apple M1 (CPU)}}
 			\end{table}
-
-			% Let $X_1, X_2, \ldots, X_n$ be a sequence of independent and identically distributed random variables with $\text{E}[X_i] = \mu$ and $\text{Var}[X_i] = \sigma^2 < \infty$, and let
-			% $$S_n = \frac{X_1 + X_2 + \cdots + X_n}{n}
-			% 	= \frac{1}{n}\sum_{i}^{n} X_i$$
-			% denote their mean. Then as $n$ approaches infinity, the random variables $\sqrt{n}(S_n - \mu)$ converge in distribution to a normal $\mathcal{N}(0, \sigma^2)$.
 
 		\end{frame}
 
@@ -245,28 +240,74 @@
 			\begin{frame}{Data selection}
 				
 				\begin{itemize}
-					\item \textbf{Data smoothing}: Filter all the data noise by using a weighted average pooling filter.\\
-					\item \textbf{Data selection}: Merge the selected frames into a single frame.
+					\item \textbf{Data smoothing}: Filter out the data noise by using a weighted average pooling filter.\\
+					$$ \psi = \frac{\sum_{i=1}^{i\leqslant\varphi} (L_i \times \omega_i) }{\sum_{i=1}^{i\leqslant\varphi} \omega_i} $$\\
+					$$ 
+					    \left\{
+							\begin{array}{ll}
+								f_i(D) = \min_{i=0} |card(D_i) - \psi| \\
+								C_I = [c \in D | card(c) = f_i(D) ]
+							\end{array}
+						\right. 
+					$$
+					\item \textbf{Data selection}: Merge the selected frames into a single frame(used as the output).
 				\end{itemize}
 
 			\end{frame}
 
 	\section{Our results}
 
-		\begin{frame}{Our results}
+		\begin{frame}{Experiment}
+
+			We have chosen 3 types of testing videos:
+
+			\begin{itemize}
+				\item \textbf{Interview}
+				\item \textbf{Vibrant}
+				\item \textbf{Hybrid}
+			\end{itemize}
+
 		\end{frame}
 
-		\begin{frame}{Our results}
+		\begin{frame}{Preliminary results}
+
+			\begin{table}
+				\centering
+				\begin{tabular}{l c r}
+					\hline
+					Type No. & Output - Truth & Accuracy \\
+					\hline
+					Interview 1 & 25 - 25 & 100.00\% \\
+					Interview 2 & 35 - 29 & 82.86\% \\
+					Interview 3 & 31 - 28 & 90.32\% \\
+					Interview Avg. & 91 - 82 & 90.10\% \\
+					\hline
+					Vibrant 1 & 9 - 13 & 69.23\% \\
+					Vibrant 2 & 19 - 38 & 50.00\% \\
+					Vibrant Avg. & 28 - 51 & 54.90\% \\
+					\hline
+					Hybrid 1 & 105 - 106 & 99.06\% \\
+					\hline
+				\end{tabular}
+			\caption{\label{tab:Results}Preliminary experiment results.}
+			\end{table}
+
 		\end{frame}
 
 	\section{Future improvements}
 
 		\begin{frame}{Future improvements}
+
+
+
 		\end{frame}
 
 	\section{Conclusion}
 
 		\begin{frame}{Conclusion}
+
+			
+
 		\end{frame}
 
 \end{document}
