@@ -8,3 +8,4 @@ Go to `/slides` and `/papers` to see the workshop presentation slides and papers
 ### TO DO List
 > 1. add the previously implemented code to this repo    
 > 2. refine 2SDS architecture
+> 3. consider a **graph neural network** approach
