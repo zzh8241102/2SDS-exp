@@ -3,7 +3,7 @@ This repo contains the Scene Separation and Data Selection Algorithm used for re
 > This algorithm is a work featured in [**Spatio-Temporal Reasoning and Learning 2022**](https://strl2022.github.io/).
 
 ### Slides and Papers
-Go to `/slides` and `/papers` to see the workshop presentation slides and papers.
+Go to `/slides` and `/workshop-papers` to see the workshop presentation slides and papers.
 
 ### TO DO List
 > 1. add the previously implemented code to this repo    
