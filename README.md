@@ -9,3 +9,4 @@ Go to `/slides` and `/workshop-paper` to see the workshop presentation slides an
 > 1. add the previously implemented code to this repo    
 > 2. refine 2SDS architecture
 > 3. consider a **graph neural network** approach
+> 4. Looking ahead - consider the impotency when GPT4 tries to process a video or image sequence? Can we integrate or enhance our methods to change the situation?
